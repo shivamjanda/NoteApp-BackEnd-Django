@@ -5,7 +5,7 @@ from .import views
 # Rest api version view of our notes
 urlpatterns = [
     path("notes/", views.notes, name="notes"),
-    path("notes/<slug:slug>/", views.note_detail, name="note-detail")
+    path("notes/<slug:slug>/", views.note_detail, name="note-detail"),
 ]
 
 # our end points

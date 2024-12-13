@@ -10,6 +10,7 @@ from rest_framework import status
 
 # CRUD operations
 
+
 # Getting all the notes (listing note) and also creating new note
 @api_view(["GET", "POST"])
 def notes(request):
@@ -19,7 +20,7 @@ def notes(request):
         serializer = NoteSerializer(notes, many=True)
         return Response(serializer.data)
 
-    elif request.method =="POST":
+    elif request.method == 'POST':
         # De serialize the object to save into the database
         serializer = NoteSerializer(data=request.data)
         if serializer.is_valid():
